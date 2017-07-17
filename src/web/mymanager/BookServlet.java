@@ -1,4 +1,4 @@
-package web.manager;
+package web.mymanager;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -44,7 +44,7 @@ public class BookServlet extends HttpServlet {
 		BusinessServiceImpl service = new BusinessServiceImpl();
 		Page page = service.getBookPageData(pagenum);
 		request.setAttribute("page", page);
-		request.getRequestDispatcher("/manager/listbook.jsp").forward(request, response);
+		request.getRequestDispatcher("/mymanager/listbook.jsp").forward(request, response);
 	}
 
 	private void add(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -108,7 +108,7 @@ public class BookServlet extends HttpServlet {
 		BusinessServiceImpl service = new BusinessServiceImpl();
 		List<Category> category = service.getAllCategory();
 		request.setAttribute("categories", category);
-		request.getRequestDispatcher("/manager/addBook.jsp").forward(request,
+		request.getRequestDispatcher("/mymanager/addBook.jsp").forward(request,
 				response);
 	}
 

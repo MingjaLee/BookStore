@@ -1,4 +1,4 @@
-package web.manager;
+package web.mymanager;
 
 import java.io.IOException;
 import java.util.List;
@@ -40,7 +40,7 @@ public class CategoryServlet extends HttpServlet {
 		BusinessServiceImpl service = new BusinessServiceImpl();
 		List<Category> CategoryList = service.getAllCategory();
 		request.setAttribute("categories", CategoryList);
-		request.getRequestDispatcher("/manager/listcategory.jsp").forward(request, response);
+		request.getRequestDispatcher("/mymanager/listcategory.jsp").forward(request, response);
 	}
 
 	private void find(HttpServletRequest request, HttpServletResponse response) {

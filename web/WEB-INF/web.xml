@@ -7,6 +7,7 @@
     <display-name>bookstore</display-name>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
+        <welcome-file>mymanager.jsp</welcome-file>
     </welcome-file-list>
 
     <filter>
@@ -30,11 +31,11 @@
     <!-- servlet class-->
     <servlet>
         <servlet-name>CategoryServlet</servlet-name>
-        <servlet-class>web.manager.CategoryServlet</servlet-class>
+        <servlet-class>web.mymanager.CategoryServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>BookServlet</servlet-name>
-        <servlet-class>web.manager.BookServlet</servlet-class>
+        <servlet-class>web.mymanager.BookServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>IndexServlet</servlet-name>
@@ -62,15 +63,15 @@
     </servlet>
     <servlet>
         <servlet-name>ListOrderServlet</servlet-name>
-        <servlet-class>web.manager.ListOrderServlet</servlet-class>
+        <servlet-class>web.mymanager.ListOrderServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>OrderDetailServlet</servlet-name>
-        <servlet-class>web.manager.OrderDetailServlet</servlet-class>
+        <servlet-class>web.mymanager.OrderDetailServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ConfirmOrderServlet</servlet-name>
-        <servlet-class>web.manager.ConfirmOrderServlet</servlet-class>
+        <servlet-class>web.mymanager.ConfirmOrderServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ClientListOrderServlet</servlet-name>
@@ -85,11 +86,11 @@
     <!-- servlet mapping -->
     <servlet-mapping>
         <servlet-name>CategoryServlet</servlet-name>
-        <url-pattern>/manager/CategoryServlet</url-pattern>
+        <url-pattern>/mymanager/CategoryServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>BookServlet</servlet-name>
-        <url-pattern>/manager/BookServlet</url-pattern>
+        <url-pattern>/mymanager/BookServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
@@ -117,15 +118,15 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ListOrderServlet</servlet-name>
-        <url-pattern>/manager/ListOrderServlet</url-pattern>
+        <url-pattern>/mymanager/ListOrderServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>OrderDetailServlet</servlet-name>
-        <url-pattern>/manager/OrderDetailServlet</url-pattern>
+        <url-pattern>/mymanager/OrderDetailServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ConfirmOrderServlet</servlet-name>
-        <url-pattern>/manager/ConfirmOrderServlet</url-pattern>
+        <url-pattern>/mymanager/ConfirmOrderServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ClientListOrderServlet</servlet-name>

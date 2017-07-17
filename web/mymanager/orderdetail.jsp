@@ -48,6 +48,6 @@
     		<td>${order.user.email }</td>
     	</tr>
 	</table>
-	<a href="${pageContext.request.contextPath }/manager/ConfirmOrderServlet?orderid=${order.id}">确认发货</a>
+	<a href="${pageContext.request.contextPath }/mymanager/ConfirmOrderServlet?orderid=${order.id}">确认发货</a>
   </body>
 </html>

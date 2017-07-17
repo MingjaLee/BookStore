@@ -1,4 +1,4 @@
-package web.manager;
+package web.mymanager;
 
 import java.io.IOException;
 
