@@ -46,12 +46,16 @@ create table book
 )ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 # dumping data for book table
-INSERT INTO book VALUES (1, '人性的枷锁', '毛姆', 80.5, 'book-cover/human-bondage.jpg', '英国文学家毛姆的长篇小说', 1);
+INSERT INTO book VALUES (1, '飞鸟集', '泰戈尔', 26.0, 'book-cover/fly-bird-set.jpg', '印度诗歌', 3);
 INSERT INTO book VALUES (2, '西游记', '吴承恩', 24.0, 'book-cover/xyj.jpg', '四大名著', 1);
 INSERT INTO book VALUES (3, '红楼梦', '曹雪芹', 50.0, 'book-cover/hlm.jpg' , '四大名著', 1);
 INSERT INTO book VALUES (4, '水浒传', '施耐庵', 20.0, 'book-cover/shz.jpg' , '四大名著', 1);
 INSERT INTO book VALUES (5, '三国演义', '罗贯中', 13.0, 'book-cover/sgyy.jpg' , '四大名著', 1);
 INSERT INTO book VALUES (6, '深入java虚拟机', '周志明', 53.8, 'book-cover/JVM.jpg' , 'Java虚拟机深入分析', 2);
+INSERT INTO book VALUES (7, '人性的枷锁', '毛姆', 80.5, 'book-cover/human-bondage.jpg', '英国文学家毛姆的长篇小说', 1);
+INSERT INTO book VALUES (8, '月亮和六便士', '毛姆', 15.0, NULL , '毛姆短篇', 1);
+INSERT INTO book VALUES (9, '活着', '余华', 12.0, NULL , '短篇', 1);
+INSERT INTO book VALUES (10, '围城', '钱钟书', 19.0, NULL , '短篇', 1);
 
 #
 # source for table user

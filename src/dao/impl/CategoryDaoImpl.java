@@ -37,7 +37,7 @@ public class CategoryDaoImpl implements CategoryDao {
 		try {
 			QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
 			String sql = "select * from category where id=?";
-			return (Category)runner.query(sql, id, new BeanHandler(Category.class));
+			return (Category)runner.query(sql, new BeanHandler(Category.class), id);
 		} catch (SQLException e) {			
 			e.printStackTrace();
 			throw new RuntimeException(e); 
@@ -58,5 +58,4 @@ public class CategoryDaoImpl implements CategoryDao {
 			throw new RuntimeException(e); 
 		}
 	}
-
 }

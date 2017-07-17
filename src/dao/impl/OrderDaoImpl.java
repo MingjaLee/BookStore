@@ -87,7 +87,7 @@ public class OrderDaoImpl implements OrderDao {
 			order.getOrderitems().addAll(list);
 			//3.找出订单属于哪个用户
 			sql = "select * from orders,user where orders.id=? and orders.user_id=user.id";
-			User user = (User) runner.query(sql, order.getId(), new BeanHandler(User.class));
+			User user = (User) runner.query(sql, new BeanHandler(User.class), order.getId());
 			order.setUser(user);
 			return order;
 			
@@ -105,11 +105,11 @@ public class OrderDaoImpl implements OrderDao {
 		try{
 			QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
 			String sql = "select * from orders where state=?";
-			List<Order> list = (List<Order>) runner.query(sql, state, new BeanListHandler(Order.class));
+			List<Order> list = (List<Order>) runner.query(sql, new BeanListHandler(Order.class), state);
 			for(Order order : list){				
 				//找出当前订单属于哪个用户
 				sql = "select user.* from orders,user where orders.id=? and orders.user_id=user.id";
-				User user = (User) runner.query(sql, order.getId(), new BeanHandler(User.class));
+				User user = (User) runner.query(sql, new BeanHandler(User.class), order.getId());
 				order.setUser(user);
 			} 
 			return list;
@@ -125,11 +125,11 @@ public class OrderDaoImpl implements OrderDao {
 			QueryRunner runner = new QueryRunner(JdbcUtils.getDataSource());
 			String sql = "select * from orders where state=? and orders.user_id=?";
 			Object params[] = {state, userid};
-			List<Order> list = (List<Order>) runner.query(sql, params, new BeanListHandler(Order.class));
+			List<Order> list = (List<Order>) runner.query(sql, new BeanListHandler(Order.class), params);
 			//将所有该user加到list中
 			for(Order order : list){
 				sql = "select * from user where user.id=?";
-				User user = (User) runner.query(sql, userid, new BeanHandler(User.class));
+				User user = (User) runner.query(sql, new BeanHandler(User.class), userid);
 				order.setUser(user);
 			}
 			return list;

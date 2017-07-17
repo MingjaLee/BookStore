@@ -8,9 +8,9 @@
   
   <frameset rows="15%,*">
   	<frame src="${pageContext.request.contextPath }/manager/head.jsp" name="head">
-  	<frameset cols="15%,*">
+<%--  	<frameset cols="15%,*">
   		<frame src="${pageContext.request.contextPath }/manager/left.jsp" name="left">
   		<frame src="${pageContext.request.contextPath }/manager/right.jsp" name="right">
-  	</frameset>
+  	</frameset>--%>
   </frameset>
 </html>
