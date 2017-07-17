@@ -1,6 +1,6 @@
 # Javaweb_bookstore
 
-练习javaweb，修改https://github.com/eson15的bookstore项目，做了如下修改
+练习javaweb，修改<https://github.com/eson15>的bookstore项目，做了如下修改
 
 > 运行环境：Osx系统、Tomcat9、IntelliJ IDEA、MySql
 
